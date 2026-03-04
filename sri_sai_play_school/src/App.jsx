@@ -1,34 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const portals = [
+  {
+    role: 'Admin',
+    description:
+      'Manage admissions, classes, fee structure, transport, and the overall school setup.',
+  },
+  {
+    role: 'Staff',
+    description:
+      'Track attendance, publish assignments, update marks, and communicate with parents.',
+  },
+  {
+    role: 'Parents',
+    description:
+      'View attendance, homework, fees, notices, and student progress updates in one place.',
+  },
+  {
+    role: 'Students',
+    description:
+      'Check timetable, assignments, exam schedule, results, and announcements.',
+  },
+]
 
+function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <main className="app-shell">
+      <header className="hero">
+        <p className="eyebrow">Sri Sai Play School</p>
+        <h1>School Management Application</h1>
+        <p className="subtitle">
+          A single platform for Admin, Staff, Parents, and Students to securely access
+          their own portal and data.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </header>
+
+      <section className="portal-section" aria-label="Available portals">
+        {portals.map((portal) => (
+          <article key={portal.role} className="portal-card">
+            <h2>{portal.role} Portal</h2>
+            <p>{portal.description}</p>
+            <button type="button">Continue as {portal.role}</button>
+          </article>
+        ))}
+      </section>
+    </main>
   )
 }
 
