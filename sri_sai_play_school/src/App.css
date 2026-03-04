@@ -1,42 +1,75 @@
-#root {
-  max-width: 1280px;
+.app-shell {
+  min-height: 100vh;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+.hero {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  color: #0b5ed7;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  color: #13213b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.subtitle {
+  max-width: 760px;
+  margin: 1rem auto 0;
+  color: #4d5b75;
 }
 
-.card {
-  padding: 2em;
+.portal-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.portal-card {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px solid #d7e3f4;
+  padding: 1.2rem;
+  box-shadow: 0 10px 25px rgba(20, 30, 50, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.portal-card h2 {
+  margin: 0;
+  color: #1f2f52;
+  font-size: 1.2rem;
+}
+
+.portal-card p {
+  margin: 0;
+  color: #4d5b75;
+  line-height: 1.45;
+}
+
+.portal-card button {
+  margin-top: auto;
+  border: 0;
+  border-radius: 0.65rem;
+  background: #0b5ed7;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.65rem 0.8rem;
+}
+
+.portal-card button:hover {
+  background: #0849a6;
 }
