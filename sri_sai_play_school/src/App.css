@@ -1,6 +1,6 @@
 .app-shell {
   min-height: 100vh;
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
@@ -60,7 +60,13 @@
   line-height: 1.45;
 }
 
-.portal-card button {
+button {
+  cursor: pointer;
+}
+
+.portal-card button,
+.student-login-form button,
+.logout-button {
   margin-top: auto;
   border: 0;
   border-radius: 0.65rem;
@@ -70,6 +76,158 @@
   padding: 0.65rem 0.8rem;
 }
 
-.portal-card button:hover {
+.portal-card button:hover,
+.student-login-form button:hover,
+.logout-button:hover {
   background: #0849a6;
+}
+
+.student-login-view {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.text-link {
+  border: 0;
+  background: transparent;
+  color: #0b5ed7;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.student-login-card {
+  background: #fff;
+  border: 1px solid #d7e3f4;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  box-shadow: 0 10px 25px rgba(20, 30, 50, 0.06);
+}
+
+.student-login-card h2 {
+  margin-top: 0;
+  color: #13213b;
+}
+
+.student-login-card p {
+  color: #4d5b75;
+}
+
+.student-login-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.student-login-form label {
+  font-weight: 600;
+  color: #1f2f52;
+}
+
+.student-login-form input {
+  border: 1px solid #c8d7ed;
+  border-radius: 0.6rem;
+  padding: 0.7rem;
+}
+
+.error-message {
+  color: #b61f2f;
+  margin: 0.25rem 0;
+  font-weight: 600;
+}
+
+.student-dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+}
+
+.dashboard-sidebar {
+  background: #0f264f;
+  color: #f6f9ff;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-sidebar .eyebrow {
+  color: #9dc1ff;
+}
+
+.dashboard-sidebar h2 {
+  margin: 0;
+}
+
+.dashboard-sidebar p {
+  margin: 0.35rem 0;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sidebar-nav button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  color: #f6f9ff;
+  padding: 0.6rem;
+  border-radius: 0.55rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.sidebar-nav button.active {
+  background: #2d7bf0;
+}
+
+.dashboard-content {
+  background: #fff;
+  border: 1px solid #d7e3f4;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  box-shadow: 0 10px 25px rgba(20, 30, 50, 0.06);
+}
+
+.content-block h3 {
+  margin-top: 0;
+  color: #1f2f52;
+}
+
+.stats-grid,
+.list-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.stat-card,
+.list-card {
+  border: 1px solid #d7e3f4;
+  border-radius: 0.75rem;
+  padding: 0.9rem;
+  background: #f8fbff;
+}
+
+.stat-card p,
+.list-card p {
+  margin: 0.2rem 0;
+  color: #42516d;
+}
+
+.stat-card h4,
+.list-card h4 {
+  margin: 0.2rem 0;
+  color: #1f2f52;
+}
+
+.single-card {
+  max-width: 400px;
+}
+
+@media (max-width: 860px) {
+  .student-dashboard {
+    grid-template-columns: 1fr;
+  }
 }
